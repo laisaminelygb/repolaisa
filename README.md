@@ -2,14 +2,10 @@
 
 Painel de uma página com as **4 hipóteses de solução** da [Matriz de Cenários Estratégicos | Jornada DataViz B2B](https://docs.google.com/document/d/1SY6KeIAaxzDQG308HwIPnpUjgmNrT3NNe0kejmTfn5c/edit).
 
-## Abrir o painel
+## Ver no navegador
 
-Abra `painel/index.html` no navegador (duplo clique ou, a partir da raiz):
+**[Abrir o painel](https://htmlpreview.github.io/?https://github.com/laisaminelygb/repolaisa/blob/cursor/painel-hipoteses-dataviz-49e7/painel/index.html)**
 
-```bash
-python3 -m http.server 8080 --directory painel
-```
+Se o preview pedir para habilitar scripts, aceite — é o visualizador de HTML do GitHub.
 
-Depois acesse `http://localhost:8080`.
-
-A imagem-resumo está em `painel/assets/resumo-hipoteses-dataviz.png`.
+Arquivos locais: `painel/index.html` e `painel/assets/resumo-hipoteses-dataviz.png`.
