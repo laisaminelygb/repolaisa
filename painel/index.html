@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel · 4 hipóteses de solução | DataViz B2B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,650;1,9..40,400&family=Outfit:wght@650;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <p class="kicker">Jornada DataViz B2B</p>
+          <h1>4 hipóteses de solução</h1>
+          <p class="subtitle">
+            Painel de uma página a partir da Matriz de Cenários Estratégicos.
+            Quatro apostas de produto, uma fonte da verdade (Cubo B2B / camada semântica).
+          </p>
+        </div>
+        <div class="header-meta">
+          <span class="chip">SSOT · Cubo B2B</span>
+          <span class="chip">Looker · Radar · Farol · Push</span>
+          <span class="chip">Pesquisa + uso atual</span>
+        </div>
+      </header>
+
+      <figure class="hero">
+        <img
+          src="./assets/resumo-hipoteses-dataviz.png"
+          alt="Imagem-resumo das quatro hipóteses de solução DataViz B2B: Autonomia Analítica, Trabalho em Campo, Painel Gerencial Dirigido e Reporte Passivo Inteligente."
+        />
+        <figcaption class="hero-caption">
+          <a class="btn btn-ghost" href="./assets/resumo-hipoteses-dataviz.png" download>
+            Baixar imagem
+          </a>
+        </figcaption>
+      </figure>
+
+      <section class="grid" aria-label="Quatro hipóteses de solução">
+        <article class="card">
+          <div class="card-top">
+            <div class="card-title">
+              <span class="num">01</span>
+              <div>
+                <h2>Autonomia analítica</h2>
+                <p class="persona">Analistas e backoffice · 34% do público</p>
+              </div>
+            </div>
+            <p class="metric">−40% tempo de conciliação no Excel</p>
+          </div>
+          <p class="block">
+            <b>Problema.</b> “Fuga para o Excel”: dashboards rígidos e lentos viram extrator de CSV.
+            Surgem verdades paralelas, Shadow IT e ausência de RBAC no Painel Único.
+          </p>
+          <p class="hyp">
+            <b>Hipótese.</b> O analista não quer gráfico estático; quer cruzar dados. Uma camada
+            semântica flexível no Looker Explorer, no lugar de painéis engessados, reduz até 40% do
+            tempo de conciliação e corta pedidos ad-hoc à engenharia.
+          </p>
+          <p class="block">
+            <b>To-be.</b> Self-service governado no Cubo B2B: o usuário monta a tabela na web
+            consumindo a base auditada, sem planilha local.
+          </p>
+          <div class="meta-row">
+            <span class="tag">Dado: <strong>54%</strong> exportam para Excel</span>
+            <span class="tag">Ferramenta: <strong>Looker Explorer</strong></span>
+            <span class="tag">Trade-off: flexibilidade local → governança</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-title">
+              <span class="num">02</span>
+              <div>
+                <h2>Trabalho em campo</h2>
+                <p class="persona">Comercial de campo, executivos e externo · 44%</p>
+              </div>
+            </div>
+            <p class="metric">62% relatam lentidão em campo</p>
+          </div>
+          <p class="block">
+            <b>Problema.</b> Tableau Mobile não é usável no celular; a rede cai; o executivo pede
+            extração no WhatsApp. Radar hoje: penetração 12,64% e sessão média de 5min35s.
+          </p>
+          <p class="hyp">
+            <b>Hipótese.</b> Centralizar visões maduras no Radar, com UX minimalista, aumenta DAU.
+            Unir dado analítico e botão transacional no Conecta fecha o trust gap
+            (“a meta da tela não é a da loja”).
+          </p>
+          <p class="block">
+            <b>To-be.</b> Mobile-first na carteira do vendedor:
+            <em>o que vender</em>, <em>para qual cliente</em>, <em>quanto falta para a meta</em>.
+          </p>
+          <div class="meta-row">
+            <span class="tag">Pedido: resposta em <strong>10 segundos</strong></span>
+            <span class="tag">Ferramenta: <strong>Radar 2.0 + Conecta</strong></span>
+            <span class="tag">Trade-off: profundidade → velocidade</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-title">
+              <span class="num">03</span>
+              <div>
+                <h2>Painel gerencial dirigido</h2>
+                <p class="persona">Gerentes e coordenadores · 46 de 50 sentem falta da ferramenta</p>
+              </div>
+            </div>
+            <p class="metric">MAU 63 → 150+</p>
+          </div>
+          <p class="block">
+            <b>Problema.</b> Reuniões gastas em filtro e espera. Farol B2B caiu a 63 usuários ativos
+            em junho pela latência do Looker Studio e sobrecarga cognitiva.
+          </p>
+          <p class="hyp">
+            <b>Hipótese.</b> Trocar “BI investigativo livre” por “BI direcionado” reduz a jornada de
+            minutos para segundos e recupera MAU acima de 150. Uma régua única de indicadores
+            acaba com visões customizadas em fórum. Se a liderança adotar a ferramenta oficial,
+            a adesão dos times sobe ~40%.
+          </p>
+          <p class="block">
+            <b>To-be.</b> Farol B2B otimizado: gestão por exceção, rollups no BigQuery, no máximo
+            5 macrofiltros, vermelho só quando a meta escapa.
+          </p>
+          <div class="meta-row">
+            <span class="tag">Dor: filtros certos em painéis lentos</span>
+            <span class="tag">Ferramenta: <strong>Farol B2B otimizado</strong></span>
+            <span class="tag">Trade-off: granularidade → performance</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-title">
+              <span class="num">04</span>
+              <div>
+                <h2>Reporte passivo inteligente</h2>
+                <p class="persona">C-level e diretores · 16% do público</p>
+              </div>
+            </div>
+            <p class="metric">Trust gap 3/10</p>
+          </div>
+          <p class="block">
+            <b>Problema.</b> A alta liderança recebe links longos, filtros irrelevantes e números
+            conflitantes. Tempo é a barreira: “quero os grandes números, imediatos e limpos”.
+          </p>
+          <p class="hyp">
+            <b>Hipótese.</b> C-level não vai explorar portal de self-service. Um modelo push de
+            zero atrito (Golden Metrics certificadas no Slack/e-mail às 08h) garante consumo
+            consistente e reconstrói credibilidade — respondendo “e daí?” em vez de só “o quê?”.
+          </p>
+          <p class="block">
+            <b>To-be.</b> Resumo matinal automático, domínio @grupoboticario.com.br, um clique
+            para aprofundar no celular. Envio só se o pipeline D-1 passar 100% nos testes.
+          </p>
+          <div class="meta-row">
+            <span class="tag">Barreira: <strong>escassez de tempo</strong></span>
+            <span class="tag">Ferramenta: <strong>Looker Schedules + Slack/e-mail</strong></span>
+            <span class="tag">Trade-off: exploração → consumo passivo</span>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Fonte:
+          <a
+            href="https://docs.google.com/document/d/1SY6KeIAaxzDQG308HwIPnpUjgmNrT3NNe0kejmTfn5c/edit"
+            >Matriz de Cenários Estratégicos | Jornada DataViz B2B</a
+          >.
+          Os quatro cards correspondem aos cenários 1–4 do documento. O cenário 5
+          (Conversational Analytics / Gemini) é transversal à mesma camada semântica.
+        </p>
+        <p>Imprimir em A3 paisagem para uma folha única.</p>
+      </footer>
+    </main>
+  </body>
+</html>
