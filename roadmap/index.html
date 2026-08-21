@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roadmap Evolutivo · Jornada Unificada DataViz B2B | gb.tech_</title>
+    <meta
+      name="description"
+      content="Estratégia evolutiva da Jornada Unificada DataViz B2B: Cubo como SSOT, consumo segmentado por persona e linha temporal Q4-26 → Q3-27."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="mesh mesh-a"></div>
+      <div class="mesh mesh-b"></div>
+      <div class="mesh mesh-c"></div>
+      <div class="grid-fade"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand-mark" href="#topo">gb.tech_</a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#estrategia">Estratégia</a>
+        <a href="#cenarios">Cenários</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#metricas">Métricas</a>
+      </nav>
+    </header>
+
+    <main id="topo">
+      <section class="hero">
+        <p class="brand-hero" aria-label="Marca">gb.tech_ · Grupo Boticário</p>
+        <h1>
+          Roadmap evolutivo<br />
+          <span>DataViz B2B</span>
+        </h1>
+        <p class="hero-lead">
+          Uma jornada segmentada por persona, com governança única no Cubo B2B —
+          do Trust Gap à autonomia conversacional até Q3&nbsp;2027.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#timeline">Ver linha temporal</a>
+          <a class="btn btn-ghost" href="#cenarios">Explorar 5 cenários</a>
+        </div>
+        <p class="hero-note">
+          Fonte: Matriz de Cenários Estratégicos + Discovery Jornada Unificada
+        </p>
+      </section>
+
+      <section id="diagnostico" class="section diagnose">
+        <div class="section-head">
+          <p class="eyebrow">O que os dados mostram</p>
+          <h2>Diagnóstico que ancora o roadmap</h2>
+          <p class="section-lead">
+            Usuários não rejeitam dados — rejeitam fricção, lentidão e números
+            desencontrados. A fragmentação tecnológica vira desperdício
+            operacional e “fuga para o Excel”.
+          </p>
+        </div>
+
+        <div class="signal-strip" role="list">
+          <article class="signal" role="listitem">
+            <p class="signal-value">3<span>/10</span></p>
+            <p class="signal-label">Trust Gap da diretoria na confiabilidade dos dashboards</p>
+          </article>
+          <article class="signal" role="listitem">
+            <p class="signal-value">54<span>%</span></p>
+            <p class="signal-label">Usuários exportam ativamente para Excel</p>
+          </article>
+          <article class="signal" role="listitem">
+            <p class="signal-value">510</p>
+            <p class="signal-label">Usuários no Painel Único (semestre) — legado Tableau</p>
+          </article>
+          <article class="signal" role="listitem">
+            <p class="signal-value">62<span>%</span></p>
+            <p class="signal-label">Relatam lentidão e alta fricção no acesso em campo</p>
+          </article>
+        </div>
+
+        <div class="pain-row">
+          <div class="pain">
+            <h3>Trust Gap</h3>
+            <p>
+              Bases não harmonizadas e filtros que “escondem” dados. Sem SSOT,
+              cada área leva uma verdade paralela para a reunião.
+            </p>
+          </div>
+          <div class="pain">
+            <h3>Performance &amp; UX</h3>
+            <p>
+              Farol consulta bases brutas a cada clique; mobile de campo
+              abandona telas densas. Painéis viram extratores, não decisões.
+            </p>
+          </div>
+          <div class="pain">
+            <h3>Governança &amp; clutter</h3>
+            <p>
+              Sem RBAC/RLS no Painel Único, qualquer um vê qualquer carteira —
+              risco de privacidade e sobrecarga cognitiva.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="estrategia" class="section strategy">
+        <div class="strategy-visual" aria-hidden="true">
+          <div class="orbit">
+            <div class="orbit-ring"></div>
+            <span class="orbit-core">Cubo B2B<br /><small>SSOT</small></span>
+            <span class="orbit-slot s1"><span class="orbit-node">Explorer</span></span>
+            <span class="orbit-slot s2"><span class="orbit-node">Radar</span></span>
+            <span class="orbit-slot s3"><span class="orbit-node">G-Site</span></span>
+            <span class="orbit-slot s4"><span class="orbit-node">Push</span></span>
+            <span class="orbit-slot s5"><span class="orbit-node">Bia / IA</span></span>
+          </div>
+        </div>
+        <div class="strategy-copy">
+          <p class="eyebrow">Caminho recomendado</p>
+          <h2>Governança central. Experiência segmentada.</h2>
+          <p>
+            Abandonamos a tese de que “um painel resolve tudo”. A matemática
+            vive no Cubo B2B; cada persona consome no formato certo — Explorer
+            para analistas, Radar para campo, G-Site para gestão tática, push
+            para diretoria e IA conversacional quando a fundação estiver madura.
+          </p>
+          <ul class="principle-list">
+            <li>
+              <strong>SSOT no Cubo</strong> — métricas homologadas, fim das
+              verdades paralelas.
+            </li>
+            <li>
+              <strong>Sunset faseado do Tableau</strong> — Painel Único e
+              Boletim Diário saem conforme a migração amadurece.
+            </li>
+            <li>
+              <strong>Hub G-Site</strong> — página inicial de indicadores e
+              governança, com autonomia de edição e menor custo de licença.
+            </li>
+            <li>
+              <strong>Farol comercial</strong> — foco no negócio; dados
+              corporativos governam via camada semântica.
+            </li>
+          </ul>
+          <p class="aside">
+            Caminho 2 (centralizar tudo no Farol) foi descartado como opção
+            principal: reproduziria clutter e não atenderia campo nem C-Level.
+          </p>
+        </div>
+      </section>
+
+      <section id="cenarios" class="section scenarios">
+        <div class="section-head">
+          <p class="eyebrow">Matriz estratégica</p>
+          <h2>Cinco cenários, uma jornada</h2>
+          <p class="section-lead">
+            Cada cenário responde a um Job to Be Done distinto. Juntos formam o
+            Hub de Soluções da visão de futuro DataViz B2B.
+          </p>
+        </div>
+
+        <div class="scenario-tabs" role="tablist" aria-label="Cenários estratégicos">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="c1" type="button">
+            01 · Autonomia
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="c2" type="button">
+            02 · Campo
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="c3" type="button">
+            03 · Gerencial
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="c4" type="button">
+            04 · Executivo
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="c5" type="button">
+            05 · IA
+          </button>
+        </div>
+
+        <div class="scenario-panels">
+          <article class="scenario-panel is-active" id="panel-c1" role="tabpanel" data-panel="c1">
+            <div class="scenario-meta">
+              <p class="scenario-num">Cenário 01</p>
+              <h3>Autonomia Analítica</h3>
+              <p class="persona">Analistas &amp; Backoffice · 34% da pesquisa</p>
+              <p class="jtbd">
+                “Cruzar dados brutos para análises ad-hoc e garantir que o número
+                reportado está correto.”
+              </p>
+            </div>
+            <div class="scenario-body">
+              <div>
+                <h4>AS IS → TO BE</h4>
+                <p>
+                  Tableau (Painel/Boletim) usado como extrator + Excel offline →
+                  Looker Explorer no Cubo B2B, com RBAC/RLS e self-service
+                  governado.
+                </p>
+              </div>
+              <div>
+                <h4>Hipótese-chave</h4>
+                <p>
+                  Flexibilidade tabular na camada semântica reduz até
+                  <strong>40%</strong> do tempo de conciliação manual no Excel e
+                  libera engenharia de pedidos “puxa esse relatório”.
+                </p>
+              </div>
+              <div>
+                <h4>Habilitadores</h4>
+                <ul>
+                  <li>Explores Looker ancorados no Cubo (fim da tabela “B2B completo”)</li>
+                  <li>RBAC + Row-Level Security no BQ/Looker</li>
+                  <li>Tech Days e rede de Data Champions</li>
+                </ul>
+              </div>
+              <p class="tradeoff"><strong>Trade-off:</strong> menos liberdade perigosa de planilha local; mais escalabilidade e SSOT.</p>
+            </div>
+          </article>
+
+          <article class="scenario-panel" id="panel-c2" role="tabpanel" data-panel="c2" hidden>
+            <div class="scenario-meta">
+              <p class="scenario-num">Cenário 02</p>
+              <h3>Trabalho em Campo</h3>
+              <p class="persona">Comercial de Campo &amp; Executivos · 44% do público</p>
+              <p class="jtbd">
+                “Saber rapidamente quem visitar e o que cobrar do cliente no dia
+                de hoje.”
+              </p>
+            </div>
+            <div class="scenario-body">
+              <div>
+                <h4>AS IS → TO BE</h4>
+                <p>
+                  Tableau Mobile / WhatsApp informal → Radar 2.0 mobile-first
+                  integrado ao Conecta, com 3 alavancas: o que vender, para quem,
+                  quanto falta para a meta.
+                </p>
+              </div>
+              <div>
+                <h4>Hipótese-chave</h4>
+                <p>
+                  Design minimalista eleva DAU; unir analítico e transacional
+                  reduz a sensação de que “a meta na tela não reflete a loja”.
+                  Penetração atual do Radar: <strong>12,64%</strong>.
+                </p>
+              </div>
+              <div>
+                <h4>Habilitadores</h4>
+                <ul>
+                  <li>Arquitetura de dados para carteira do executivo (não só DB)</li>
+                  <li>SSO com filtro automático de rota/carteira</li>
+                  <li>Piloto em homologação antes do Go-Live</li>
+                </ul>
+              </div>
+              <p class="tradeoff"><strong>Trade-off:</strong> profundidade exploratória cede lugar a velocidade extrema e UX objetiva.</p>
+            </div>
+          </article>
+
+          <article class="scenario-panel" id="panel-c3" role="tabpanel" data-panel="c3" hidden>
+            <div class="scenario-meta">
+              <p class="scenario-num">Cenário 03</p>
+              <h3>Painel Gerencial Dirigido</h3>
+              <p class="persona">Gerentes &amp; Coordenadores · 46/50 sentem falta da ferramenta</p>
+              <p class="jtbd">
+                “Achar a causa-raiz dos desvios regionais de forma ágil explorando
+                hipóteses dinamicamente.”
+              </p>
+            </div>
+            <div class="scenario-body">
+              <div>
+                <h4>AS IS → TO BE</h4>
+                <p>
+                  BI investigativo lento (filtros infinitos) → G-Site B2B como
+                  painel-bússola, gestão por exceção, pré-agregações no Cubo e hub
+                  de links/governança.
+                </p>
+              </div>
+              <div>
+                <h4>Hipótese-chave</h4>
+                <p>
+                  BI direcionado reduz a jornada de minutos para segundos e
+                  projeta MAU &gt; 150. Adoção oficial pela liderança pode
+                  elevar uso dos times em <strong>~40%</strong>.
+                </p>
+              </div>
+              <div>
+                <h4>Habilitadores</h4>
+                <ul>
+                  <li>Rollups pré-processados no BigQuery/Cubo</li>
+                  <li>UX storytelling: ≤5 macro-filtros, cor semântica</li>
+                  <li>Sunset oficial do Tableau + portal centralizador</li>
+                </ul>
+              </div>
+              <p class="tradeoff"><strong>Trade-off:</strong> granularidade linha a linha fica no Explorer; a tela gerencial prioriza ação.</p>
+            </div>
+          </article>
+
+          <article class="scenario-panel" id="panel-c4" role="tabpanel" data-panel="c4" hidden>
+            <div class="scenario-meta">
+              <p class="scenario-num">Cenário 04</p>
+              <h3>Reporte Passivo Inteligente</h3>
+              <p class="persona">C-Level &amp; Diretores · 16% da pesquisa</p>
+              <p class="jtbd">
+                “Obter a visibilidade instantânea dos macroindicadores para
+                direcionamento estratégico em segundos.”
+              </p>
+            </div>
+            <div class="scenario-body">
+              <div>
+                <h4>AS IS → TO BE</h4>
+                <p>
+                  Links longos e painéis operacionais forçados → modelo Push:
+                  resumo Golden Metrics no Slack/e-mail às 08h, com drill-down
+                  HTML seguro em um clique.
+                </p>
+              </div>
+              <div>
+                <h4>Hipótese-chave</h4>
+                <p>
+                  Executivo não quer ser explorador de BI. Entrega diária de
+                  métricas certificadas (“E daí?” + ação) reconstrói credibilidade
+                  da área de dados.
+                </p>
+              </div>
+              <div>
+                <h4>Habilitadores</h4>
+                <ul>
+                  <li>Homologação das 3–4 Golden Metrics com a diretoria</li>
+                  <li>Looker Schedules + GAS / webhooks Slack</li>
+                  <li>Guardrails CI/CD: só envia com pipeline D-1 100% ok</li>
+                </ul>
+              </div>
+              <p class="tradeoff"><strong>Trade-off:</strong> consumo passivo padronizado em vez de drill-down profundo no primeiro contato.</p>
+            </div>
+          </article>
+
+          <article class="scenario-panel" id="panel-c5" role="tabpanel" data-panel="c5" hidden>
+            <div class="scenario-meta">
+              <p class="scenario-num">Cenário 05</p>
+              <h3>Conversational Analytics</h3>
+              <p class="persona">Cross-persona · prioridade para 41,2% dos pesquisados</p>
+              <p class="jtbd">
+                Perguntar em linguagem natural — “Bia, cruze SKU X com meta da
+                região Y” — sem planilha paralela nem alucinação.
+              </p>
+            </div>
+            <div class="scenario-body">
+              <div>
+                <h4>AS IS → TO BE</h4>
+                <p>
+                  Upload de Excel em IAs públicas → Gemini / Looker Assistant
+                  estritamente limitado ao catálogo do Cubo (LLM como motor de
+                  raciocínio, não como banco).
+                </p>
+              </div>
+              <div>
+                <h4>Hipótese-chave</h4>
+                <p>
+                  Absorve ~<strong>30%</strong> das extrações simples da
+                  engenharia. Explicabilidade (“mostre o raciocínio”) cura Trust
+                  Gap e acelera decisões de dias para segundos.
+                </p>
+              </div>
+              <div>
+                <h4>Habilitadores</h4>
+                <ul>
+                  <li>System prompts + guardrails (zero métrica inventada)</li>
+                  <li>Dicionário de dados rico no BigQuery</li>
+                  <li>FinOps: teto de bytes por consulta de chat</li>
+                </ul>
+              </div>
+              <p class="tradeoff"><strong>Trade-off:</strong> custo variável por token vs. capacity fixo montando painéis de vida curta.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline">
+        <div class="section-head">
+          <p class="eyebrow">Linha temporal</p>
+          <h2>Q4&nbsp;2026 → Q3&nbsp;2027</h2>
+          <p class="section-lead">
+            Evolução faseada: fundação semântica primeiro, depois desacoplamento
+            visual, sunset do legado e, só então, escala de IA.
+          </p>
+        </div>
+
+        <ol class="timeline-track">
+          <li class="phase phase-now">
+            <div class="phase-when">
+              <span class="phase-q">Q4 · 2026</span>
+              <span class="phase-tag">Fundação</span>
+            </div>
+            <h3>Homologar, pré-processar, evangelizar</h3>
+            <p class="phase-summary">
+              Fechar a base para qualquer experiência confiável. Sem Cubo maduro,
+              nenhum cenário escala.
+            </p>
+            <ul class="phase-items">
+              <li>Homologação de KPIs e golden metrics no Cubo B2B</li>
+              <li>Pré-processamento de cargas (Farol deixa de bater em bruto)</li>
+              <li>Descontinuar tabela legada “B2B completo” em favor de metas pré-calculadas</li>
+              <li>Formação da rede de Data Champions + Tech Days</li>
+              <li>G-Site hub: inventário de links, dicionário e diretrizes</li>
+              <li>Mapeamento do que falta na camada semântica (B2B / B2P)</li>
+            </ul>
+            <div class="phase-impact">
+              <strong>Valor:</strong> latência visual dentro do Doherty Threshold; backoffice acelera.
+              <em>Trade-off:</em> engenharia e UX focam na fundação — entregas externas desaceleram neste trimestre.
+            </div>
+          </li>
+
+          <li class="phase">
+            <div class="phase-when">
+              <span class="phase-q">Q1 · 2027</span>
+              <span class="phase-tag">Segmentar</span>
+            </div>
+            <h3>Desacoplar visual e empurrar a informação</h3>
+            <p class="phase-summary">
+              A informação encontra a pessoa — não o contrário. Campo e C-Level
+              saem do “caçar dado no Tableau”.
+            </p>
+            <ul class="phase-items">
+              <li>Piloto de reporte passivo HTML/Slack para C-Level (Cenário 4)</li>
+              <li>Radar “Modo Rua”: 3 KPIs essenciais + SSO de carteira (Cenário 2)</li>
+              <li>Primeira versão do G-Site gerencial por exceção (Cenário 3)</li>
+              <li>Explores Looker em piloto com analistas campeões (Cenário 1)</li>
+              <li>RBAC/RLS em produção nas novas superfícies</li>
+            </ul>
+            <div class="phase-impact">
+              <strong>Valor:</strong> decisão ultrarrápida; queda de pedidos de “print do dash”.
+              <em>Trade-off:</em> primeiro nível de alerta com menos drill-down imediato.
+            </div>
+          </li>
+
+          <li class="phase">
+            <div class="phase-when">
+              <span class="phase-q">Q2 · 2027</span>
+              <span class="phase-tag">Sunset</span>
+            </div>
+            <h3>Desligar legado e liberar autonomia</h3>
+            <p class="phase-summary">
+              Migrar dependências críticas e apagar as luzes do Tableau com
+              segurança operacional.
+            </p>
+            <ul class="phase-items">
+              <li>Desativação gradativa do Boletim Diário e Painel Único</li>
+              <li>Migração de sandboxes/planilhas paralelas para Cubo / Explorer</li>
+              <li>Acesso governado ao BigQuery para analistas avançados</li>
+              <li>G-Site assume a página inicial de indicadores (fim da home Tableau)</li>
+              <li>Corte de custo de licenças legadas e auditoria LGPD fechada</li>
+            </ul>
+            <div class="phase-impact">
+              <strong>Valor:</strong> self-service nativo no habitat do analista; economia de licença.
+              <em>Trade-off:</em> ruptura cultural — exige letramento e paths de transição claros.
+            </div>
+          </li>
+
+          <li class="phase">
+            <div class="phase-when">
+              <span class="phase-q">Q3 · 2027</span>
+              <span class="phase-tag">Inovar</span>
+            </div>
+            <h3>Escala conversacional com guardrails</h3>
+            <p class="phase-summary">
+              IA só depois da fundação: “Pergunte para a Bia” sobre o catálogo
+              oficial, com feature flags e FinOps.
+            </p>
+            <ul class="phase-items">
+              <li>Agentes Gemini / Looker Assistant ligados ao Cubo (Cenário 5)</li>
+              <li>Feature flags por perfil e controle para distribuidor</li>
+              <li>Explicabilidade obrigatória + onboarding de prompts corporativos</li>
+              <li>Metas de acurácia ≥ 90% antes de liberação ampla</li>
+              <li>Governança contínua: dono do dado, priorização e Sentinela</li>
+            </ul>
+            <div class="phase-impact">
+              <strong>Valor:</strong> autonomia sem fila de tickets; mesma matemática para todos.
+              <em>Trade-off:</em> custo flutuante de cloud e risco reputacional se alucinar — mitiga com guardrails.
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section enablers">
+        <div class="section-head">
+          <p class="eyebrow">Dependências críticas</p>
+          <h2>O que precisa estar pronto em paralelo</h2>
+        </div>
+        <div class="enabler-grid">
+          <article>
+            <h3>Camada semântica</h3>
+            <p>Cubo B2B como única fonte da verdade; harmonização de indicadores; metadados ricos para IA.</p>
+          </article>
+          <article>
+            <h3>Qualidade &amp; input</h3>
+            <p>Sentinela, saneamento Integra vs GCP, hierarquia comercial e metas unificadas.</p>
+          </article>
+          <article>
+            <h3>Segurança</h3>
+            <p>RBAC/RLS por carteira, região e marca; domínio corporativo nos pushes.</p>
+          </article>
+          <article>
+            <h3>Change management</h3>
+            <p>Data Champions, Tech Days, sunset comunicado e paths de migração por persona.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="metricas" class="section metrics">
+        <div class="section-head">
+          <p class="eyebrow">Como saberemos que funcionou</p>
+          <h2>Métricas de sucesso do roadmap</h2>
+        </div>
+        <div class="metric-grid">
+          <div class="metric">
+            <p class="metric-k">Confiança no dado</p>
+            <p class="metric-v">3/10 → ≥ 7/10</p>
+            <p class="metric-d">CSAT de confiança da liderança</p>
+          </div>
+          <div class="metric">
+            <p class="metric-k">Fuga para Excel</p>
+            <p class="metric-v">−40%</p>
+            <p class="metric-d">Tempo de conciliação manual (Cenário 1)</p>
+          </div>
+          <div class="metric">
+            <p class="metric-k">Campo</p>
+            <p class="metric-v">DAU ↑</p>
+            <p class="metric-d">Radar além dos 12,64% de penetração</p>
+          </div>
+          <div class="metric">
+            <p class="metric-k">Gestão tática</p>
+            <p class="metric-v">MAU &gt; 150</p>
+            <p class="metric-d">G-Site / BI direcionado</p>
+          </div>
+          <div class="metric">
+            <p class="metric-k">Engenharia</p>
+            <p class="metric-v">−30%</p>
+            <p class="metric-d">Extrações ad-hoc absorvidas por Explorer/IA</p>
+          </div>
+          <div class="metric">
+            <p class="metric-k">IA</p>
+            <p class="metric-v">≥ 90%</p>
+            <p class="metric-d">Acurácia antes do roll-out amplo</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section close">
+        <h2>Próximo movimento</h2>
+        <p>
+          Validar prioridades do Q4-26 com liderança (Marcela / Henrique),
+          publicar o G-Site hub e travar o backlog de homologação do Cubo —
+          base de tudo que vem depois.
+        </p>
+        <div class="hero-cta">
+          <a
+            class="btn btn-primary"
+            href="https://sites.google.com/grupoboticario.com.br/jornada-unificada-dataviz-b2b/estrat%C3%A9gia-cen%C3%A1rios"
+            target="_blank"
+            rel="noopener"
+            >Abrir Estratégia · Cenários</a
+          >
+          <a
+            class="btn btn-ghost"
+            href="https://docs.google.com/document/d/1SY6KeIAaxzDQG308HwIPnpUjgmNrT3NNe0kejmTfn5c/edit"
+            target="_blank"
+            rel="noopener"
+            >Matriz completa</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>gb.tech_ · Jornada Unificada DataViz B2B · Roadmap evolutivo</p>
+      <p>Síntese a partir do Discovery, Matriz de Cenários e decisões táticas de ago/2026.</p>
+    </footer>
+
+    <script>
+      (function () {
+        const tabs = Array.from(document.querySelectorAll(".tab"));
+        const panels = Array.from(document.querySelectorAll(".scenario-panel"));
+
+        function activate(id) {
+          tabs.forEach((tab) => {
+            const on = tab.dataset.tab === id;
+            tab.classList.toggle("is-active", on);
+            tab.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          panels.forEach((panel) => {
+            const on = panel.dataset.panel === id;
+            panel.classList.toggle("is-active", on);
+            panel.hidden = !on;
+          });
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => activate(tab.dataset.tab));
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) entry.target.classList.add("is-inview");
+            });
+          },
+          { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        document
+          .querySelectorAll(".phase, .signal, .pain, .enabler-grid article, .metric")
+          .forEach((el) => observer.observe(el));
+      })();
+    </script>
+  </body>
+</html>
