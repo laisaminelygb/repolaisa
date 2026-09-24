@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Formulário para captura de novas iniciativas de evolução de produtos digitais." />
+  <meta name="theme-color" content="#1b4dd8" />
+  <title>Captura de Iniciativas · Produtos Digitais</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#form-iniciativa">Pular para o formulário</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__brand">
+        <span class="topbar__mark" aria-hidden="true">🚀</span>
+        <div>
+          <h1 class="topbar__title">Captura de iniciativas</h1>
+          <p class="topbar__subtitle">Evolução de produtos digitais</p>
+        </div>
+      </div>
+      <nav class="topbar__nav" aria-label="Seções">
+        <a class="topbar__link" href="#form-iniciativa">Nova iniciativa</a>
+        <a class="topbar__link" href="#registradas">Registradas <span class="badge" id="contadorNav" aria-hidden="true">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="intro" aria-labelledby="intro-titulo">
+      <h2 id="intro-titulo" class="intro__title">Registre uma nova iniciativa</h2>
+      <p class="intro__text">
+        Preencha os campos abaixo para que a iniciativa entre na priorização de produto.
+        Os dados ficam salvos neste dispositivo e podem ser exportados em CSV ou JSON.
+      </p>
+    </section>
+
+    <form id="form-iniciativa" class="card form" novalidate>
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Identificação</legend>
+
+        <div class="grid">
+          <div class="field field--full">
+            <label class="field__label" for="nome">Nome da iniciativa <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="nome" name="nome" required
+                   maxlength="120" autocomplete="off" placeholder="Ex.: Onboarding autoatendimento no Radar" />
+            <p class="field__error" data-error-for="nome" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="produto">Produto digital <span class="req" aria-hidden="true">*</span></label>
+            <select class="field__control" id="produto" name="produto" required>
+              <option value="">Selecione um produto</option>
+              <option value="Radar">Radar</option>
+              <option value="Integra">Integra</option>
+              <option value="Painel Único">Painel Único</option>
+              <option value="Farol B2B">Farol B2B</option>
+              <option value="Outro">Outro (especificar)</option>
+            </select>
+            <p class="field__error" data-error-for="produto" role="alert"></p>
+          </div>
+
+          <div class="field is-hidden" id="wrapperProdutoOutro">
+            <label class="field__label" for="produtoOutro">Qual produto digital?</label>
+            <input class="field__control" type="text" id="produtoOutro" name="produtoOutro"
+                   maxlength="80" autocomplete="off" placeholder="Nome do produto" />
+            <p class="field__error" data-error-for="produtoOutro" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Contexto de negócio</legend>
+
+        <div class="grid">
+          <div class="field field--full">
+            <label class="field__label" for="objetivo">Objetivo desta iniciativa <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="objetivo" name="objetivo" rows="3" required maxlength="600"
+                      placeholder="O que queremos alcançar com esta iniciativa?"></textarea>
+            <p class="field__hint" data-counter-for="objetivo"></p>
+            <p class="field__error" data-error-for="objetivo" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="problema">Qual é o problema de negócio que a iniciativa resolve? <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="problema" name="problema" rows="3" required maxlength="600"
+                      placeholder="Descreva a dor atual, quem é afetado e com que frequência."></textarea>
+            <p class="field__hint" data-counter-for="problema"></p>
+            <p class="field__error" data-error-for="problema" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="impacto">Impacto no negócio <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="impacto" name="impacto" rows="3" required maxlength="600"
+                      placeholder="Receita, custo, risco, eficiência operacional, experiência do cliente..."></textarea>
+            <p class="field__hint" data-counter-for="impacto"></p>
+            <p class="field__error" data-error-for="impacto" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="metrica">Métrica de sucesso (alvo) <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="metrica" name="metrica" required maxlength="200"
+                   placeholder="Ex.: reduzir tempo de ativação de 5 para 2 dias até o 2º mês" />
+            <p class="field__error" data-error-for="metrica" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="importancia">Por que isso é importante para a minha área? <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="importancia" name="importancia" rows="3" required maxlength="600"
+                      placeholder="Relação com as metas e prioridades da sua área."></textarea>
+            <p class="field__hint" data-counter-for="importancia"></p>
+            <p class="field__error" data-error-for="importancia" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Prazo e responsáveis</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label class="field__label" for="deadline">Deadline limite para subida <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="date" id="deadline" name="deadline" required />
+            <p class="field__error" data-error-for="deadline" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="responsavelNegocio">Nome da pessoa responsável (do negócio) <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="responsavelNegocio" name="responsavelNegocio" required
+                   maxlength="120" autocomplete="name" placeholder="Nome e sobrenome" />
+            <p class="field__error" data-error-for="responsavelNegocio" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="pmResponsavel">Nome do PM responsável pelo produto digital <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="pmResponsavel" name="pmResponsavel" required
+                   maxlength="120" autocomplete="off" placeholder="Nome e sobrenome" />
+            <p class="field__error" data-error-for="pmResponsavel" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Classificação</legend>
+
+        <div class="grid">
+          <fieldset class="field choice">
+            <legend class="field__label">Iniciativa nova? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="iniciativaNova" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="iniciativaNova" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__error" data-error-for="iniciativaNova" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="field choice">
+            <legend class="field__label">Carry over? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="carryOver" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="carryOver" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__error" data-error-for="carryOver" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="field choice">
+            <legend class="field__label">Alinhado previamente com Tech? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="alinhadoTech" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="alinhadoTech" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__error" data-error-for="alinhadoTech" role="alert"></p>
+          </fieldset>
+        </div>
+      </fieldset>
+
+      <p class="form__resumo-erros is-hidden" id="resumoErros" role="alert" tabindex="-1"></p>
+
+      <div class="form__actions">
+        <button class="btn btn--primary" type="submit" id="btnSalvar">Salvar iniciativa</button>
+        <button class="btn btn--ghost" type="button" id="btnLimpar">Limpar formulário</button>
+        <button class="btn btn--ghost is-hidden" type="button" id="btnCancelarEdicao">Cancelar edição</button>
+      </div>
+    </form>
+
+    <section class="registradas" id="registradas" aria-labelledby="registradas-titulo">
+      <div class="registradas__header">
+        <h2 class="registradas__title" id="registradas-titulo">
+          Iniciativas registradas <span class="badge" id="contadorLista">0</span>
+        </h2>
+        <div class="registradas__actions">
+          <button class="btn btn--sm btn--ghost" type="button" id="btnExportarCsv">Exportar CSV</button>
+          <button class="btn btn--sm btn--ghost" type="button" id="btnExportarJson">Exportar JSON</button>
+          <button class="btn btn--sm btn--danger" type="button" id="btnApagarTudo">Apagar tudo</button>
+        </div>
+      </div>
+
+      <div class="field registradas__busca">
+        <label class="sr-only" for="busca">Buscar iniciativa</label>
+        <input class="field__control" type="search" id="busca" placeholder="Buscar por nome, produto ou responsável" />
+      </div>
+
+      <p class="empty" id="listaVazia">Nenhuma iniciativa registrada ainda. Preencha o formulário acima para começar.</p>
+      <ul class="lista" id="lista"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Os dados ficam armazenados apenas neste navegador (localStorage). Exporte antes de limpar o histórico.</p>
+    </div>
+  </footer>
+
+  <div class="toast is-hidden" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
