@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Canal de captação trimestral de iniciativas de evolução dos produtos digitais do Grupo Boticário." />
+  <meta name="theme-color" content="#0a6b4a" />
+  <title>Captação de iniciativas · Produtos Digitais</title>
+  <meta property="og:title" content="Captação de iniciativas · Produtos Digitais" />
+  <meta property="og:description" content="Submeta as evoluções que sua área precisa no próximo trimestre." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#form-iniciativa">Pular para o formulário</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__brand">
+        <span class="topbar__mark" aria-hidden="true">🌿</span>
+        <div>
+          <h1 class="topbar__title">Captação de iniciativas</h1>
+          <p class="topbar__subtitle" id="topbarSubtitulo">Produtos Digitais</p>
+        </div>
+      </div>
+      <nav class="topbar__nav" aria-label="Seções">
+        <a class="topbar__link" href="#form-iniciativa">Nova iniciativa</a>
+        <a class="topbar__link" href="#registradas">Minhas submissões <span class="badge" id="contadorNav" aria-hidden="true">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero" aria-labelledby="hero-titulo">
+      <p class="hero__eyebrow" id="heroCiclo">Planejamento trimestral</p>
+      <h2 class="hero__title" id="hero-titulo">Quais evoluções a sua área precisa no próximo trimestre?</h2>
+      <p class="hero__text">
+        Este é o canal oficial para as áreas do Grupo Boticário submeterem as evoluções necessárias
+        nos produtos digitais. Cada iniciativa enviada entra na análise de priorização feita por
+        Produto e Tech no início do trimestre.
+      </p>
+
+      <div class="janela is-hidden" id="janela" role="status">
+        <span class="janela__status" id="janelaStatus"></span>
+        <span class="janela__texto" id="janelaTexto"></span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#form-iniciativa">Submeter iniciativa</a>
+        <button class="btn btn--ghost" type="button" id="btnCompartilhar">Compartilhar página</button>
+        <a class="btn btn--ghost is-hidden" id="linkApoio" href="#" target="_blank" rel="noopener"></a>
+      </div>
+
+      <ol class="passos">
+        <li class="passos__item">
+          <span class="passos__num" aria-hidden="true">1</span>
+          <div>
+            <h3 class="passos__titulo">Preencha uma iniciativa por evolução</h3>
+            <p class="passos__texto">Leva cerca de 5 minutos. Se tiver mais de uma demanda, envie uma de cada vez.</p>
+          </div>
+        </li>
+        <li class="passos__item">
+          <span class="passos__num" aria-hidden="true">2</span>
+          <div>
+            <h3 class="passos__titulo">Envie dentro da janela do trimestre</h3>
+            <p class="passos__texto">Depois do prazo, a iniciativa entra na fila do ciclo seguinte.</p>
+          </div>
+        </li>
+        <li class="passos__item">
+          <span class="passos__num" aria-hidden="true">3</span>
+          <div>
+            <h3 class="passos__titulo">Acompanhe com o PM do produto</h3>
+            <p class="passos__texto">O PM indicado retorna com a avaliação de esforço e a posição na priorização.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <form id="form-iniciativa" class="card form" novalidate>
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Ciclo e área</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label class="field__label" for="trimestre">Trimestre de referência <span class="req" aria-hidden="true">*</span></label>
+            <select class="field__control" id="trimestre" name="trimestre" required></select>
+            <p class="field__error" data-error-for="trimestre" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="areaSolicitante">Área solicitante <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="areaSolicitante" name="areaSolicitante" required
+                   maxlength="80" autocomplete="organization" placeholder="Ex.: Trade Marketing B2B" />
+            <p class="field__error" data-error-for="areaSolicitante" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Identificação</legend>
+
+        <div class="grid">
+          <div class="field field--full">
+            <label class="field__label" for="nome">Nome da iniciativa <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="nome" name="nome" required
+                   maxlength="120" autocomplete="off" placeholder="Ex.: Onboarding autoatendimento no Radar" />
+            <p class="field__error" data-error-for="nome" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="produto">Produto digital <span class="req" aria-hidden="true">*</span></label>
+            <select class="field__control" id="produto" name="produto" required>
+              <option value="">Selecione um produto</option>
+            </select>
+            <p class="field__error" data-error-for="produto" role="alert"></p>
+          </div>
+
+          <div class="field is-hidden" id="wrapperProdutoOutro">
+            <label class="field__label" for="produtoOutro">Qual produto digital?</label>
+            <input class="field__control" type="text" id="produtoOutro" name="produtoOutro"
+                   maxlength="80" autocomplete="off" placeholder="Nome do produto" />
+            <p class="field__error" data-error-for="produtoOutro" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Contexto de negócio</legend>
+
+        <div class="grid">
+          <div class="field field--full">
+            <label class="field__label" for="objetivo">Objetivo desta iniciativa <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="objetivo" name="objetivo" rows="3" required maxlength="600"
+                      placeholder="O que queremos alcançar com esta iniciativa?"></textarea>
+            <p class="field__hint" data-counter-for="objetivo"></p>
+            <p class="field__error" data-error-for="objetivo" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="problema">Qual é o problema de negócio que a iniciativa resolve? <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="problema" name="problema" rows="3" required maxlength="600"
+                      placeholder="Descreva a dor atual, quem é afetado e com que frequência."></textarea>
+            <p class="field__hint" data-counter-for="problema"></p>
+            <p class="field__error" data-error-for="problema" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="impacto">Impacto no negócio <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="impacto" name="impacto" rows="3" required maxlength="600"
+                      placeholder="Receita, custo, risco, eficiência operacional, experiência do cliente..."></textarea>
+            <p class="field__hint" data-counter-for="impacto"></p>
+            <p class="field__error" data-error-for="impacto" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="metrica">Métrica de sucesso (alvo) <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="metrica" name="metrica" required maxlength="200"
+                   placeholder="Ex.: reduzir tempo de ativação de 5 para 2 dias até o 2º mês" />
+            <p class="field__error" data-error-for="metrica" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="importancia">Por que isso é importante para a minha área? <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="field__control" id="importancia" name="importancia" rows="3" required maxlength="600"
+                      placeholder="Relação com as metas e prioridades da sua área."></textarea>
+            <p class="field__hint" data-counter-for="importancia"></p>
+            <p class="field__error" data-error-for="importancia" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Prazo e responsáveis</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label class="field__label" for="deadline">Deadline limite para subida <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="date" id="deadline" name="deadline" required />
+            <p class="field__error" data-error-for="deadline" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="responsavelNegocio">Nome da pessoa responsável (do negócio) <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="responsavelNegocio" name="responsavelNegocio" required
+                   maxlength="120" autocomplete="name" placeholder="Nome e sobrenome" />
+            <p class="field__error" data-error-for="responsavelNegocio" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="pmResponsavel">Nome do PM responsável pelo produto digital <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="pmResponsavel" name="pmResponsavel" required
+                   maxlength="120" autocomplete="off" placeholder="Nome e sobrenome" />
+            <p class="field__hint">Se não souber quem é o PM, escreva "a definir".</p>
+            <p class="field__error" data-error-for="pmResponsavel" role="alert"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">Classificação</legend>
+
+        <div class="grid">
+          <fieldset class="field choice">
+            <legend class="field__label">Iniciativa nova? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="iniciativaNova" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="iniciativaNova" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__error" data-error-for="iniciativaNova" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="field choice">
+            <legend class="field__label">Carry over? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="carryOver" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="carryOver" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__hint">Carry over é a iniciativa que já estava em andamento e segue para o próximo trimestre.</p>
+            <p class="field__error" data-error-for="carryOver" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="field choice">
+            <legend class="field__label">Alinhado previamente com Tech? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice__options">
+              <label class="choice__option">
+                <input type="radio" name="alinhadoTech" value="Sim" required />
+                <span>Sim</span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="alinhadoTech" value="Não" />
+                <span>Não</span>
+              </label>
+            </div>
+            <p class="field__error" data-error-for="alinhadoTech" role="alert"></p>
+          </fieldset>
+        </div>
+      </fieldset>
+
+      <p class="form__resumo-erros is-hidden" id="resumoErros" role="alert" tabindex="-1"></p>
+
+      <div class="form__actions">
+        <button class="btn btn--primary" type="submit" id="btnSalvar">Enviar iniciativa</button>
+        <button class="btn btn--ghost" type="button" id="btnCopiarResumo">Copiar resumo</button>
+        <button class="btn btn--ghost" type="button" id="btnLimpar">Limpar formulário</button>
+        <button class="btn btn--ghost is-hidden" type="button" id="btnCancelarEdicao">Cancelar edição</button>
+      </div>
+      <p class="form__nota" id="notaEnvio"></p>
+    </form>
+
+    <section class="registradas" id="registradas" aria-labelledby="registradas-titulo">
+      <div class="registradas__header">
+        <h2 class="registradas__title" id="registradas-titulo">
+          Minhas submissões <span class="badge" id="contadorLista">0</span>
+        </h2>
+        <div class="registradas__actions">
+          <button class="btn btn--sm btn--ghost" type="button" id="btnExportarCsv">Exportar CSV</button>
+          <button class="btn btn--sm btn--ghost" type="button" id="btnExportarJson">Exportar JSON</button>
+          <button class="btn btn--sm btn--danger" type="button" id="btnApagarTudo">Apagar tudo</button>
+        </div>
+      </div>
+
+      <p class="registradas__nota">
+        Esta lista fica salva apenas neste navegador e serve para você acompanhar e reenviar o que já preencheu.
+      </p>
+
+      <div class="field registradas__busca">
+        <label class="sr-only" for="busca">Buscar iniciativa</label>
+        <input class="field__control" type="search" id="busca" placeholder="Buscar por nome, produto, área ou responsável" />
+      </div>
+
+      <p class="empty" id="listaVazia">Nenhuma iniciativa registrada ainda. Preencha o formulário acima para começar.</p>
+      <ul class="lista" id="lista"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p id="rodapeContato"></p>
+      <p>Dúvidas sobre o preenchimento? Procure o PM do produto digital antes do fim da janela de captação.</p>
+    </div>
+  </footer>
+
+  <div class="toast is-hidden" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
