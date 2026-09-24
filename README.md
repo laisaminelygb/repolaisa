@@ -63,6 +63,11 @@ produto.
 ## Como publicar
 
 Hospede os quatro arquivos em qualquer serviço de conteúdo estático (GitHub Pages, S3, intranet).
+
+Pelo GitHub Pages, que já serve para divulgar o link às áreas: em **Settings → Pages**, escolha
+*Deploy from a branch*, selecione a branch e a pasta `/ (root)` e salve. O endereço publicado fica
+em `https://<organizacao>.github.io/<repositorio>/`.
+
 Para testar localmente:
 
 ```bash
